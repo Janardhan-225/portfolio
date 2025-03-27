@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { DownloadIcon } from "lucide-react";
+import Image from 'next/image';
 
 export default function Hero() {
   const handleDownload = () => {
@@ -26,7 +27,7 @@ export default function Hero() {
           className="flex-1"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I'm{" "}
+          <h1>Don&apos;t miss this opportunity</h1>
             <span className="bg-gradient-to-r from-primary to-blue-600 text-transparent bg-clip-text">
               Janardhan
             </span>
@@ -51,11 +52,15 @@ export default function Hero() {
   className="flex-1 relative"
 >
   <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-white-500 shadow-lg">
-    <img
-      src="/profile_pic.jpg" // Ensure the image is inside the "public" folder
-      alt="Janardhan"
-      className="w-full h-full object-cover rounded-full"
-    />
+
+        <Image 
+          src="/profile_pic.jpg" 
+          alt="Hero"
+          width={1200}  // Required
+          height={630}  // Required
+          priority      // Optional: for LCP elements
+        />
+
   </div>
 </motion.div>
 

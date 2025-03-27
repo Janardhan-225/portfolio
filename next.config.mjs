@@ -7,4 +7,4 @@ const nextConfig = {
   images: { unoptimized: true },
 };
 
-export default nextConfig;  // ✅ No extra parenthesis
+export default nextConfig;  // ✅ Use CommonJS instead of ES Modules
