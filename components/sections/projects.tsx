@@ -7,22 +7,22 @@ import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
-    {
-      title: "AI Trends Explorer",
-      description: "Explore and analyze the latest trends in AI technology",
-      techStack: ["Next.js", "TypeScript", "TailwindCSS"],
-      github: "https://github.com/Janardhan-225/AI-Trends-Explorer.git",
-      demo: "https://ai-tools-front.onrender.com/",
-    },
+  {
+    title: "AI Trends Explorer",
+    description: "Explore and analyze the latest trends in AI technology",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS"],
+    github: "https://github.com/Janardhan-225/AI-Trends-Explorer.git",
+    demo: "https://ai-tools-front.onrender.com/",
+  },
   {
     title: "Auto-Job Filing Application",
     description: "Automates job applications with AI-powered resume generation",
     techStack: ["React", "Node.js", "MongoDB", "OpenAI"],
     github: "https://github.com/Janardhan-225/Auto_Job_Filling.git",
     demo: "https://auto-job-filling.vercel.app/",
-  },
-  
-];
+  }
+]  // ✅ No extra comma at the end
+
 
 export default function Projects() {
   const [ref, inView] = useInView({
