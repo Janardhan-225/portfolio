@@ -7,20 +7,21 @@ import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
+    {
+      title: "AI Trends Explorer",
+      description: "Explore and analyze the latest trends in AI technology",
+      techStack: ["Next.js", "TypeScript", "TailwindCSS"],
+      github: "https://github.com/Janardhan-225/AI-Trends-Explorer.git",
+      demo: "https://ai-tools-front.onrender.com/",
+    },
   {
     title: "Auto-Job Filing Application",
     description: "Automates job applications with AI-powered resume generation",
     techStack: ["React", "Node.js", "MongoDB", "OpenAI"],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Janardhan-225/Auto_Job_Filling.git",
+    demo: "https://auto-job-filling.vercel.app/",
   },
-  {
-    title: "AI Trends Explorer",
-    description: "Explore and analyze the latest trends in AI technology",
-    techStack: ["Next.js", "TypeScript", "TailwindCSS"],
-    github: "https://github.com/Janardhan-225/AI-Trends-Explorer.git",
-    demo: "#",
-  },
+  
 ];
 
 export default function Projects() {
