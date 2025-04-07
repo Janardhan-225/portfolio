@@ -12,7 +12,7 @@ const experiences = [
     icon: Trophy,
   },
   {
-    title: "Web-Hack Participant",
+    title: "Web-Hack Champion",
     description: "Developed an AI-powered website, recognized for innovative solutions",
     icon: Lightbulb,
   },
