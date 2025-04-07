@@ -27,7 +27,7 @@ export default function Hero() {
           className="flex-1"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          <h1>Don&apos;t miss this opportunity</h1>
+          <h1>Hello, I am</h1>
             <span className="bg-gradient-to-r from-primary to-blue-600 text-transparent bg-clip-text">
               Janardhan
             </span>
