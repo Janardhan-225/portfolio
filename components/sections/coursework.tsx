@@ -6,12 +6,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { BookOpen } from "lucide-react";
 
 const courses = [
-  "Introduction to Computer Science",
-  "Data Structures and Algorithms",
+  "Database Management Systems",
+  "Data Structures & Algorithms",
   "Object-Oriented Programming",
-  "Database Management",
-  "Performance Optimization",
-  "Web Security Practices",
+  "Machine Learning",
+  "Computer Networks",
+  "Operating Systems",
 ];
 
 export default function Coursework() {
@@ -29,7 +29,7 @@ export default function Coursework() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          Coursework
+          Relevant Coursework
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
