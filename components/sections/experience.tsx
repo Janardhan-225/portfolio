@@ -3,27 +3,36 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Trophy, Lightbulb, Users } from "lucide-react";
+import { Trophy, Code, Users, GraduationCap } from "lucide-react";
 
-const experiences = [
+const achievements = [
   {
-    title: "VJ Hackathon Winner",
-    description: "Won Best UI/UX Design for an innovative mobile application",
+    title: "Webathon 2.0 Runner-Up",
+    description:
+      "Awarded for developing a high-impact full-stack web application with exceptional UI/UX and collaborative problem-solving under time constraints.",
     icon: Trophy,
   },
   {
-    title: "Web-Hack Champion",
-    description: "Developed an AI-powered website, recognized for innovative solutions",
-    icon: Lightbulb,
+    title: "500+ Problems Solved on LeetCode & CodeChef",
+    description:
+      "Demonstrated strong algorithmic thinking and problem-solving skills through consistent competitive programming practice.",
+    icon: Code,
   },
   {
-    title: "KRITHOMEDH Club Member & TechWeek Volunteer",
-    description: "Active member contributing to technical events and workshops",
+    title: "Tech Club Contributor & Hackathon Participant",
+    description:
+      "Active member of KRITHOMEDH and TechWeek, contributing to workshops and technical events focused on AI and full-stack development.",
     icon: Users,
+  },
+  {
+    title: "Professional Development Certifications",
+    description:
+      "Completed Full Stack Development (Master Coding), AI Foundations Associate (Oracle), and DSA (Smart Interviews).",
+    icon: GraduationCap,
   },
 ];
 
-export default function Experience() {
+export default function AchievementsAndCompetitiveProgramming() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -38,13 +47,13 @@ export default function Experience() {
           transition={{ duration: 0.5 }}
           className="text-3xl md:text-4xl font-bold text-center mb-12"
         >
-          Experience & Achievements
+          Achievements & Competitive Programming
         </motion.h2>
 
         <div className="space-y-6">
-          {experiences.map((experience, index) => (
+          {achievements.map((achievement, index) => (
             <motion.div
-              key={experience.title}
+              key={achievement.title}
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -52,13 +61,13 @@ export default function Experience() {
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
-                    <experience.icon className="h-6 w-6 text-primary" />
-                    {experience.title}
+                    <achievement.icon className="h-6 w-6 text-primary" />
+                    {achievement.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    {experience.description}
+                    {achievement.description}
                   </p>
                 </CardContent>
               </Card>
