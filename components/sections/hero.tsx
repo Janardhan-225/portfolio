@@ -2,9 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 import { DownloadIcon } from "lucide-react";
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function Hero() {
   const handleDownload = () => {
@@ -26,17 +25,17 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="flex-1"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          <h1>Hello, I am</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+            Hello, I am{" "}
             <span className="bg-gradient-to-r from-primary to-blue-600 text-transparent bg-clip-text">
               Janardhan
             </span>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-muted-foreground">
-            Full-Stack Developer
+            Backend-Focused Full-Stack Developer | AI & ML Enthusiast
           </h2>
           <p className="text-lg mb-8 text-muted-foreground">
-            Building Scalable & Interactive Web Applications
+            Crafting intelligent, scalable web platforms with FastAPI, MongoDB, and AI integrations.
           </p>
           <Button className="group" size="lg" onClick={handleDownload}>
             <DownloadIcon className="mr-2 h-4 w-4 group-hover:animate-bounce" />
@@ -44,26 +43,23 @@ export default function Hero() {
           </Button>
         </motion.div>
 
-        {/* Right Section - Profile Picture (Using img instead of Next.js <Image />) */}
+        {/* Right Section - Profile Picture */}
         <motion.div
-  initial={{ opacity: 0, x: 50 }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ duration: 0.5 }}
-  className="flex-1 relative"
->
-  <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-white-500 shadow-lg">
-
-        <Image 
-          src="/profile_pic.jpg" 
-          alt="Hero"
-          width={1200}  // Required
-          height={630}  // Required
-          priority      // Optional: for LCP elements
-        />
-
-  </div>
-</motion.div>
-
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="flex-1 relative"
+        >
+          <div className="relative w-48 h-48 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-white shadow-lg">
+            <Image
+              src="/profile_pic.jpg"
+              alt="Janardhan Profile"
+              width={1200}
+              height={630}
+              priority
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   );
