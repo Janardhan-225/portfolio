@@ -44,7 +44,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
+    // You can integrate email service or backend here
   };
 
   return (
@@ -54,12 +54,16 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-4xl font-bold text-center mb-6"
         >
           Get in Touch
         </motion.h2>
+        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          Whether you're a recruiter, collaborator, or fellow developer, feel free to reach out. I'm always open to exciting opportunities and meaningful conversations.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -67,22 +71,17 @@ export default function Contact() {
           >
             <Card>
               <CardHeader>
-                <CardTitle>Contact Form</CardTitle>
+                <CardTitle>Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div>
-                    <Input placeholder="Your Name" />
-                  </div>
-                  <div>
-                    <Input type="email" placeholder="Your Email" />
-                  </div>
-                  <div>
-                    <Textarea
-                      placeholder="Your Message"
-                      className="min-h-[150px]"
-                    />
-                  </div>
+                  <Input placeholder="Your Name" required />
+                  <Input type="email" placeholder="Your Email" required />
+                  <Textarea
+                    placeholder="Your Message"
+                    className="min-h-[150px]"
+                    required
+                  />
                   <Button type="submit" className="w-full">
                     Send Message
                   </Button>
@@ -91,6 +90,7 @@ export default function Contact() {
             </Card>
           </motion.div>
 
+          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
@@ -98,7 +98,7 @@ export default function Contact() {
           >
             <Card>
               <CardHeader>
-                <CardTitle>Connect With Me</CardTitle>
+                <CardTitle>Connect with Me</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
