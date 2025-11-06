@@ -19,13 +19,13 @@ const skills = {
     { name: "Vector Databases", level: 80 },
     { name: "MySQL", level: 75 },
   ],
-  AI & ML: [
+  AI: [
     { name: "Google Gemini API", level: 85 },
     { name: "Vector Embeddings", level: 80 },
     { name: "RAG Implementation", level: 75 },
     { name: "NLP & Generative AI", level: 80 },
   ],
-  DevOps & Tools: [
+  "DevOps & Tools": [
     { name: "Git & GitHub", level: 90 },
     { name: "Docker", level: 80 },
     { name: "Postman", level: 85 },
